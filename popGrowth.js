@@ -1,10 +1,11 @@
 function nbYear(p0, percent, aug, p) {
-  let currentPop = p0;
-  let n = 0;
-  percent = percent / 100;
+  let currentPop = p0; //store starting pop in current pop
+  let n = 0; //set number of years to 0
+  percent = percent / 100; //convert number to a percentage
+  // run while current pop is less or equal to ending pop
   while (currentPop <= p) {
     currentPop = currentPop + currentPop * percent + aug;
-    n++;
+    n++; // increment year
   }
 
   return n;
